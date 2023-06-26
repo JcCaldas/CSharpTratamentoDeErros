@@ -7,7 +7,7 @@ try
 }
 catch (Exception ex)
 {
-
+    throw ex;
     Console.WriteLine("\nTratando o erro em Main\n");
     Console.WriteLine(ex.Message);
     Console.WriteLine(ex.StackTrace);
@@ -25,6 +25,7 @@ class A
         }
         catch (Exception)
         {
+            throw; //repassa a excessão para ser tratada
             Console.WriteLine("Tratando Erro em A");
         }
     }
@@ -42,6 +43,7 @@ class C
 {
     public static void ProcessarC()
     {
+        //lançando exceção manual
         throw new NotImplementedException("Método não implementado");
     }
 }
