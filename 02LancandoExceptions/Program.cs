@@ -7,7 +7,7 @@ try
 }
 catch (Exception ex)
 {
-    throw ex;
+    
     Console.WriteLine("\nTratando o erro em Main\n");
     Console.WriteLine(ex.Message);
     Console.WriteLine(ex.StackTrace);
